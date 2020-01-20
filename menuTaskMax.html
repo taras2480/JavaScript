@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+</head>
+<style>
+    .menu ul {
+      margin: 0;
+      list-style: none;
+      padding-left: 20px;
+      display: none;
+    }
+
+    .menu .title {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .menu .title::before {
+      content: '▶ ';
+      font-size: 80%;
+      color: green;
+    }
+
+    .menu.open .title::before {
+      content: '▼ ';
+    }
+
+    .menu.open ul {
+      display: block;
+    }
+  </style>
+<body>
+
+<div id="education" class="menu">
+    <span class="title">Університет</span>
+    <ul>
+      <li>---кафедра ІСМ</li>
+      <li>---кафедра ЕСМ</li>
+      <li>---кафедра політології</li>
+    </ul>
+
+  </div>
+  
+  <script src="menuTaskMax.js"></script>
+
+</body>
+</html>
